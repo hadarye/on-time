@@ -3,12 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useContext, useRef } from 'react';
 import { MeetingContext } from '../../contexts/meeting.context';
 import { CounterContext } from '../../contexts/counter.context';
+import Error from '../../components/Error/Error.component';
+import closeBtn from '../../media/images/x.svg';
 
 const MeetingInfo = (props) => {
     const { setCurrCounter } = useContext(CounterContext);
-    const pageRef = useRef();
-    const navigate = useNavigate();
     const { setCurrInfo } = useContext(MeetingContext);
+    const pageRef = useRef();
+    const isEmpty = useRef(true);
+    const [showError, setShowError] = useState(false);
     const [currentInfoObj, setCurrentInfoObj] = useState({
         "name": "",
         "topic": "",
@@ -16,14 +19,29 @@ const MeetingInfo = (props) => {
     });
 
     const handleSNextBtn = () => {
-        setCurrInfo(currentInfoObj);
-        setCurrCounter("design");
+        checkInputs();
+        if (isEmpty.current) {
+            setShowError(true);
+        } else {
+            setCurrInfo(currentInfoObj);
+            setCurrCounter("design"); 
+        }
+ 
         // navigate("/design");
     }
 
     const handlePrevBtn = () => {
         // navigate("/");
         setCurrCounter("start");
+    }
+    
+    const checkInputs = () => {
+        isEmpty.current = false;
+        Object.values(currentInfoObj).forEach((name) => {
+            if(name === "") {
+                return isEmpty.current = true;
+            }
+        });
     }
     
     const handleInputChange = (e) => {
@@ -34,8 +52,14 @@ const MeetingInfo = (props) => {
         }));
     }
 
+    const closeError = () => {
+        setShowError(false);
+    }
+
     return (
         <div className={`meeting-info ${props.class}`} ref={pageRef}>
+            {showError ? <Error></Error> : null}
+            {showError ? <img src={closeBtn} className='icon close-btn-error' onClick={closeError}></img> : null}
             <div className='next-btn-container'>
                 <p></p>
                 <button className='next-btn' onClick={handleSNextBtn}>המשך</button>

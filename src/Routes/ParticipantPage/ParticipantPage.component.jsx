@@ -61,31 +61,6 @@ const ParticipantPage = (props) => {
                 
             }
         });
-    //         const {participant} = participantList[i];
-    //         console.log(participant);
-    //         if (Number(participant["hours"]) > 9 || isNaN(participant["hours"]) || Number(participant["hours"]) < 0){
-    //             return noMistake.current = false;
-    //         } else {
-    //             if (Number(participant["minutes"]) > 59 || isNaN(participant["minutes"]) || Number(participant["minutes"]) < 0){
-    //                 return noMistake.current = (false);
-    //             } else {
-    //                 if (Number(participant["seconds"]) > 59 || isNaN(participant["seconds"]) || Number(participant["seconds"]) < 0){
-    //                     return noMistake.current = (false);
-    //                 } else {
-    //                     if((Number(participant["hours"]) + Number(participant["seconds"]) + Number(participant["minutes"])) === 0) {
-    //                         return noMistake.current = (false);
-    //                     } else {
-    //                        console.log("parent no mistake"); 
-    //                     }
-                        
-    //                 } 
-    //             }
-                
-    //         }
-    //     }
-        console.log("finished loop");
-        // return noMistake.current = (true);
-
     }
 
     const closeError = () => {
