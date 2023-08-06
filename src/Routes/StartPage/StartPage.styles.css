@@ -1,0 +1,74 @@
+
+
+.start-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10vh;
+}
+
+.hello {
+    position: absolute;
+    width: 7vw;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		transform: translate(-50%, -60%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+
+.credit {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 95%;
+}
+
+.black-overlay {
+    background-color: rgba(0, 0, 0, 0.547);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+
+}
+
+
+@keyframes fade-screen {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes fade-out-screen {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

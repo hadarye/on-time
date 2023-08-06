@@ -1,0 +1,167 @@
+/* best seen at 1500px or less */
+
+
+.TimerCircle {
+    width: 30vw;
+    height: 30vw;
+    background-image: url("../../media/images/Timer_glass_circle.svg");
+}
+
+.circle-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: solid white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 100%;
+    /* background: linear-gradient(180deg, #f0e1fc 30%, #015871 30%); */
+    -webkit-box-shadow:0px 0px 45px 4px rgba(255,255,255,0.38);
+    -moz-box-shadow: 0px 0px 45px 4px rgba(255,255,255,0.38);
+    box-shadow: 0px 0px 45px 4px rgba(255,255,255,0.38);
+}
+
+.paused {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    -o-animation-play-state: paused !important; 
+    animation-play-state: paused !important;
+}
+
+.bg-color {
+    width: 100%;
+    /* background: linear-gradient(180deg, #f0e1fc00 10%, #015871 20%); */
+    background: rgb(1,88,113);
+    background: linear-gradient(0deg, rgba(1,88,113,1) 98%, rgba(255,255,255,1) 100%);
+    /* background-color: #015871; */
+    transition: height 1s;
+    position: relative;
+    bottom: 0%;
+}
+
+.all-timer-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pause-btn {
+    background-image: url('../../media/images/pause_button.svg');
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-top: 2vh;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.ocean {
+    direction: ltr;
+    /* height: 100%; */
+    width: 100%;
+    transition: height 1s;
+    opacity: 0.6;
+}
+
+.timer-txt-container {
+    font-family: "digital";
+    width: 30vw;
+    height: 30vw;
+    z-index: 2;
+    text-align: left;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+}
+
+.timer-txt {
+    font-size: 6vmax;
+    width: 20vw;
+}
+
+.wave-top {
+    /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; */
+    /* background: url("../../media/images/Artboard\ 1.svg") repeat-x;  */
+    /* background: url("../../media/images/wave.svg") repeat-x;  */
+    /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198" preserveAspectRatio="none"> <path fill="current" stroke="current" fill-rule="evenodd" d="M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z" transform="matrix(-1 0 0 1 1600 0)"/></svg>'); */
+    /* background-size: cover; */
+    width: 6400px;
+    height: 198px;
+    transform: translate3d(0, 0, 0);
+    background-repeat: repeat-x;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.wave-bg {
+    width: 6400px;
+    height: 600px;
+    transform: translate3d(0, 0, 0);
+    /* background-repeat: repeat-x; */
+    /* background-color: #055971; */
+}
+
+.wave {
+    position: relative;
+    width: 6400px;
+    height: 100%;
+    /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; */
+    /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite; */
+    transform: translate3d(0, 0, 0);
+    /* background-repeat: repeat-x; */
+    opacity: 1;
+
+}
+
+.inner-wave {
+    /* width: 6400px; */
+    height: 198px;
+    display: inline-block;
+}
+
+/* .wave:nth-of-type(2) {
+    top: -475px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+} */
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate3d(0, -25px, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 5px, 0);
+    }
+}
+
+@keyframes waveDecline {
+    0% {
+        height: 100%;
+    }
+
+    100% {
+        height: 15%;
+    }
+}

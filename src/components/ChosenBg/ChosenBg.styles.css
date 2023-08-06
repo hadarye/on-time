@@ -1,0 +1,36 @@
+.chosen-bg {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    position: fixed;
+    z-index: 0;
+}
+
+.showen-bg {
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+.black-full-screen {
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 0;
+    background-color: black;
+    opacity: 0;
+}
+
+@keyframes blackScreen {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

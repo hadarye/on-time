@@ -1,0 +1,42 @@
+.option {
+    width: 21vw;
+    height: 22vh;
+    background-size: 100% 100%;
+    margin: 0.5vh 0.5vw;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 20px;
+}
+
+.option:focus {
+    -webkit-box-shadow:0px 0px 14px 6px rgba(255,255,255,0.79);
+    -moz-box-shadow: 0px 0px 14px 6px rgba(255,255,255,0.79);
+    box-shadow: 0px 0px 14px 6px rgba(255,255,255,0.79);
+}
+
+@keyframes hoverAnimation {
+    100% {
+        transform: scale(108%, 108%);
+        /* -webkit-box-shadow:0px 0px 14px 6px rgba(255,255,255,0.79);
+        -moz-box-shadow: 0px 0px 14px 6px rgba(255,255,255,0.79);
+        box-shadow: 0px 0px 14px 6px rgba(255,255,255,0.79); */
+    }
+}
+
+@keyframes endHoverAnimation {
+    0% {
+        transform: scale(108%, 108%);
+        /* -webkit-box-shadow:0px 0px 14px 6px rgba(255,255,255,0.79);
+        -moz-box-shadow: 0px 0px 14px 6px rgba(255,255,255,0.79);
+        box-shadow: 0px 0px 14px 6px rgba(255,255,255,0.79); */
+    }
+    100% {
+        transform: scale(100%, 100%);
+        /* -webkit-box-shadow:0px 0px 0px 0px;
+        -moz-box-shadow:0px 0px 0px 0px;
+        box-shadow: 0px 0px 0px 0px; */
+    }
+}
+
+

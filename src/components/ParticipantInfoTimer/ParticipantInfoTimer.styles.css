@@ -1,0 +1,33 @@
+.participant-info-timer {
+    width: 40vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2vh 2vw;
+    text-align: right;
+}
+
+.txt-timer {
+    color: white;
+}
+
+.participant-topic-timer {
+    font-size: 3.2vmax;
+    margin: 1vh 0;
+}
+
+.participant-name-timer {
+    font-size: 2.8vmax;
+    font-weight: 600;
+    margin: 0 0;
+}
+
+.participant-job-timer {
+    font-size: 2vmax;
+    font-weight: 500;
+    margin: 0 0;
+}

@@ -1,0 +1,149 @@
+.participant-time {
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 12vh;
+    background-color: transparent;
+    border: none;
+    font-size: 4vmax;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: "digital";
+    padding-left: 1vw;
+    color: rgb(93, 156, 202);
+    
+}
+
+.input {
+    -webkit-box-shadow:0px 0px 29px 8px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.57);
+    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.57);
+    width: 25vw;
+    height: 5vh;
+    border: solid;
+    border-color: rgb(175, 175, 175);
+    border-width: 1px;
+    border-radius: 10px;
+    font-family: "assistant";
+    font-size: 1.5vmax;
+}
+
+.input-title {
+    color: white;
+    margin: 0.5vh 0.5vw;
+    position: relative;
+    z-index: 2;
+    font-size: 1.3vmax;
+}
+
+.participant-topic {
+    border: none;
+    border-bottom: solid;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.808);
+    background-color: transparent;
+    width: 45vw;
+    font-size: 1.5vmax;
+    font-family: "assistant";
+}
+
+
+.participant-topic::placeholder {
+    color: rgba(255, 255, 255, 0.615);
+}
+
+.input-arrange-topic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input-arrange {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 3vw;
+}
+
+.form-container {
+    display: flex;
+    height: 15vh;
+    margin: 2vh 0;
+    align-items: stretch;
+    padding: 1vh 1vw;
+}
+
+.top-inputs-container {
+    display: flex;
+}
+
+.input-arrange-time {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+
+.right-inputs-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    font-family: "assistant";
+}
+
+.remove-participant {
+    width: 1.5vw;
+    height: 1.5vw;
+    align-self: center;
+    margin-left: 1vw;
+    background-image: url('../../media/images/remove_btn.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.timer-single-input {
+    background-color: transparent;
+    border: none;
+    color: rgb(93, 156, 202);
+    font-size: 2vmax;
+    width: 3vw;
+    height: 8vh;
+    font-family: "digital";
+    text-align: center;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: fit-content;
+    color: rgb(93, 156, 202);
+    font-size: 2vmax;
+    font-family: "digital";
+}
+
+.timer-single-input:invalid ~ #warning {
+    opacity: 1;
+}
+
+.timer-single-input:invalid {
+    color: rgb(226, 58, 58);
+}
+
+.warning-icon {
+    background-image: url('../../media/images/exclamation.png');
+    width: 1.5vw;
+    height: 1.5vw;
+    align-self: center;
+    margin-left: 1vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0;
+}
